@@ -1,0 +1,138 @@
+Question 1:-
+Consider a connected undirected graph with distinct edge costs. Which of the following are true? [Check all that apply.]
+
+
+Suppose the edge e is not the cheapest edge that crosses the cut (A,B). Then e does not belong to any minimum spanning tree.
+
+The minimum spanning tree is unique.
+
+Suppose the edge e is the most expensive edge contained in the cycle C. Then e does not belong to any minimum spanning tree.
+
+Suppose the edge e is the cheapest edge that crosses the cut (A,B). Then e belongs to every minimum spanning tree.
+
+
+Question 2:-
+You are given a connected undirected graph G with distinct edge costs, in adjacency list representation. You are also given the edges of a minimum spanning tree T of G. This question asks how quickly you can recompute the MST if we change the cost of a single edge. Which of the following are true? [RECALL: It is not known how to deterministically compute an MST from scratch in O(m) time, where m is the number of edges of G.] [Check all that apply.]
+
+
+Suppose e∈T and we decrease the cost of e. Then, the new MST can be recomputed in O(m) deterministic time.
+
+Suppose e∉T and we increase the cost of e. Then, the new MST can be recomputed in O(m) deterministic time.
+
+Suppose e∉T and we decrease the cost of e. Then, the new MST can be recomputed in O(m) deterministic time.
+
+Suppose e∈T and we increase the cost of e. Then, the new MST can be recomputed in O(m) deterministic time.
+
+
+Question 3:-
+Which of the following graph algorithms can be sped up using the heap data structure?
+
+
+Prim's minimum-spanning tree algorithm.
+
+Kruskal's minimum-spanning tree algorithm.
+
+Our dynamic programming algorithm for computing a maximum-weight independent set of a path graph.
+
+Dijkstra's single-source shortest-path algorithm (from Part 2).
+
+
+Question 4:-
+Which of the following problems reduce, in a straightforward way, to the minimum spanning tree problem? [Check all that apply.]
+
+
+The single-source shortest-path problem.
+
+Given a connected undirected graph G=(V,E) with positive edge costs, compute a minimum-cost set F⊆E such that the graph (V,E−F) is acyclic.
+
+The minimum bottleneck spanning tree problem. That is, among all spanning trees of a connected graph with edge costs, compute one with the minimum-possible maximum edge cost.
+
+The maximum-cost spanning tree problem. That is, among all spanning trees of a connected graph with edge costs, compute one with the maximum-possible sum of edge costs.
+
+
+Question 5:-
+Recall the greedy clustering algorithm from lecture and the max-spacing objective function. Which of the following are true? [Check all that apply.]
+
+
+Suppose the greedy algorithm produces a k-clustering with spacing S. Then, if x,y are two points in a common cluster of this k-clustering, the distance between x and y is at most S.
+
+If the greedy algorithm produces a k-clustering with spacing S, then every other k-clustering has spacing at most S.
+
+If the greedy algorithm produces a k-clustering with spacing S, then the distance between every pair of points chosen by the greedy algorithm (one pair per iteration) is at most S.
+
+This greedy clustering algorithm can be viewed as Prim's minimum spanning tree algorithm, stopped early.
+
+
+Question 6:-
+We are given as input a set of n jobs, where job j has a processing time pj and a deadline dj. Recall the definition of completion times Cj from the video lectures. Given a schedule (i.e., an ordering of the jobs), we define the lateness lj of job j as the amount of time Cj−dj after its deadline that the job completes, or as 0 if Cj≤dj.
+
+Our goal is to minimize the total lateness,
+
+∑jlj.
+
+Which of the following greedy rules produces an ordering that minimizes the total lateness?
+
+You can assume that all processing times and deadlines are distinct.
+
+WARNING: This is similar to but not identical to a problem from Problem Set #1 (the objective function is different).
+
+
+None of the other options are correct
+
+Schedule the requests in increasing order of the product dj⋅pj
+
+Schedule the requests in increasing order of processing time pj
+
+Schedule the requests in increasing order of deadline dj
+
+
+Question 7:-
+Consider an alphabet with five letters, {a,b,c,d,e}, and suppose we know the frequencies fa=0.28, fb=0.27, fc=0.2, fd=0.15, and fe=0.1. What is the expected number of bits used by Huffman's coding scheme to encode a 1000-letter document?
+
+
+2520
+
+2230
+
+2250
+
+2450
+
+
+Question 8:-
+Which of the following extensions of the Knapsack problem can be solved in time polynomial in n, the number of items, and M, the largest number that appears in the input? [Check all that apply.]
+
+
+You are given n items with positive integer values and sizes, and a positive integer capacity W, as usual. You are also given a budget k≤n on the number of items that you can use in a feasible solution. The problem is to compute the max-value set of at most k items with total size at most W.
+
+You are given n items with positive integer values and sizes, and a positive integer capacity W, as usual. The problem is to compute the max-value set of items with total size exactly W. If no such set exists, the algorithm should correctly detect that fact.
+
+You are given n items with positive integer values and sizes, as usual, and m positive integer capacities, W1,W2,…,Wm . These denote the capacities of m different Knapsacks, where m could be as large as Θ(n). The problem is to pack items into these knapsacks to maximize the total value of the packed items. You are not allowed to split a single item between two of the knapsacks.
+
+You are given n items with positive integer values and sizes, as usual, and two positive integer capacities, W1 and W2. The problem is to pack items into these two knapsacks (of capacities W1 and W2) to maximize the total value of the packed items. You are not allowed to split a single item between the two knapsacks.
+
+
+Question 9:-
+The following problems all take as input two strings X and Y, of length m and n, over some alphabet Σ. Which of them can be solved in O(mn) time? [Check all that apply.]
+
+
+Consider the following variation of sequence alignment. Instead of a single gap penalty αgap, you're given two numbers a and b. The penalty of inserting k gaps in a row is now defined as ak+b, rather than kαgap. Other penalties (for matching two non-gaps) are defined as before. The goal is to compute the minimum-possible penalty of an alignment under this new cost model.
+
+Compute the length of a longest common substring of X and Y. (A substring is a consecutive subsequence of a string. So "bcd" is a substring of "abcdef", whereas "bdf" is not.)
+
+Compute the length of a longest common subsequence of X and Y. (Recall a subsequence need not be consecutive. For example, the longest common subsequence of "abcdef" and "afebcd" is "abcd".)
+
+Assume that X and Y have the same length n. Does there exist a permutation f, mapping each i∈{1,2,…,n} to a distinct f(i)∈{1,2,…,n}, such that Xi=Yf(i) for every i=1,2,…,n?
+
+
+Question 10:-
+Consider an instance of the optimal binary search tree problem with 7 keys (say 1,2,3,4,5,6,7 in sorted order) and frequencies w1=.2,w2=.05,w3=.17,w4=.1,w5=.2,w6=.03,w7=.25. What is the minimum-possible average search time of a binary search tree with these keys?
+
+
+2.33
+
+2.18
+
+2.29
+
+2.23

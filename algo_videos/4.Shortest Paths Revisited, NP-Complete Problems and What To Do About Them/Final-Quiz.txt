@@ -1,0 +1,134 @@
+Question 1:-
+Of the following dynamic programming algorithms covered in lecture, which ones always perform O(1) work per subproblem? [Check all that apply.]
+
+
+The Bellman-Ford shortest-path algorithm.
+
+The Floyd-Warshall all-pairs shortest-paths algorithm.
+
+The dynamic programming algorithm for the sequence alignment problem.
+
+The dynamic programming algorithm for the optimal binary search tree problem.
+
+The dynamic programming algorithm for the knapsack problem.
+
+
+Question 2:-
+Assume that P≠NP. Which of the following problems can be solved in polynomial time? [Check all that apply.]
+
+
+Given a directed graph with real-valued edge lengths, compute the length of a longest cycle-free path between any pair of vertices (i.e., maxu,v∈VmaxP∈Puv∑e∈Pce, where Puv denotes the set of cycle-free u-v paths).
+
+Given a directed graph with nonnegative edge lengths, compute the length of a maximum-length shortest path between any pair of vertices (i.e., maxu,v∈Vd(u,v), where d(u,v) is the shortest-path distance between u and v).
+
+Given a directed acyclic graph with real-valued edge lengths, compute the length of a longest path between any pair of vertices.
+
+Given a directed graph with nonnegative edge lengths, compute the length of a longest cycle-free path between any pair of vertices (i.e., maxu,v∈VmaxP∈Puv∑e∈Pce, where Puv denotes the set of cycle-free u-v paths).
+
+
+Question 3:-
+Recall the all-pairs shortest-paths problem. Which of the following algorithms are guaranteed to be correct on instances with negative edge lengths that don't have any negative-cost cycles? [Check all that apply.]
+
+
+Run Dijkstra's algorithm n times, once for each choice of a source vertex.
+
+The Floyd-Warshall algorithm.
+
+Run the Bellman-Ford algorithm n times, once for each choice of a source vertex.
+
+Johnson's reweighting algorithm.
+
+
+Question 4:-
+Suppose a computational problem Π that you care about is NP-complete. Which of the following are true? [Check all that apply.]
+
+
+NP-completeness is a "death sentence"; you should not even try to solve the instances of Π that are relevant for your application.
+
+You should not try to design an algorithm that is guaranteed to solve Π correctly and in polynomial time for every possible instance (unless you're explicitly trying to prove that P=NP).
+
+If your boss criticizes you for failing to find a polynomial-time algorithm for Π, you can legitimately claim that thousands of other scientists (including Turing Award winners, etc.) have likewise tried and failed to solve Π.
+
+Since the dynamic programming algorithm design paradigm is only useful for designing exact algorithms, there's no point in trying to apply it to the problem Π.
+
+
+Question 5:-
+Which of the following statements are logically consistent with our current state of knowledge (i.e., with the mathematical statements that have been formally proved)? [Check all that apply.]
+
+
+There is an NP-complete problem that can be solved in O(nlogn) time, where n is the size of the input.
+
+There is an NP-complete problem that is polynomial-time solvable.
+
+There is no NP-complete problem that can be solved in O(nlogn) time, where n is the size of the input.
+
+Some NP-complete problems are polynomial-time solvable, and some NP-complete problems are not polynomial-time solvable.
+
+
+Question 6:-
+Of the following problems, which can be solved in polynomial time by directly applying algorithmic ideas that were discussed in lecture and/or the homeworks? [Check all that apply.]
+
+
+Given an undirected graph G and a value for k such that k=Θ(logn), where n is the number of vertices of G, does G have a vertex cover of size at most k?
+
+Given an undirected graph G and a constant value for k (i.e., k=O(1), independent of the size of G), does G have an independent set of size at least k?
+
+Given an undirected graph G and a value for k such that k=Θ(logn), where n is the number of vertices of G, does G have an independent set of size at least k?
+
+Given an undirected graph G and a constant value for k (i.e., k=O(1), independent of the size of G), does G have a vertex cover of size at most k?
+
+
+Question 7:-
+In lecture we gave a dynamic programming algorithm for the traveling salesman problem. Does this algorithm imply that P=NP? [Check all that apply.]
+
+
+No. A polynomial-time algorithm for the traveling salesman problem does not necessarily imply that P=NP.
+
+No. Since there are an exponential number of subproblems in our dynamic programming formulation, the algorithm does not run in polynomial time.
+
+Yes, it does.
+
+No. Since we perform a super-polynomial amount of work extracting the final TSP solution from the solutions of all of the subproblems, the algorithm does not run in polynomial time.
+
+No. Since we sometimes perform a super-polynomial amount of work computing the solution of a single subprolem, the algorithm does not run in polynomial time.
+
+
+Question 8:-
+Consider the Knapsack problem and the following greedy algorithm: (1) sort the items in nonincreasing order of value over size (i.e., the ratio vi/wi); (2) return the maximal prefix of items that fits in the Knapsack (i.e., the k items with the largest ratios, where k is as large as possible subject to the sum of the item sizes being at most the knapsack capacity W). Which of the following are true? [Check all that apply.]
+
+
+If the size of every item is at most 20% of the Knapsack capacity (i.e., wi≤W/5 for every i), then this algorithm is guaranteed to output a feasible solution with total value at least 80% times that of an optimal solution.
+
+This algorithm always outputs a feasible solution with total value at least 50% times that of an optimal solution.
+
+If all items have the same value/size ratio, then this algorithm always outputs an optimal solution (no matter how ties are broken).
+
+If all items have the same size, then this algorithm always outputs an optimal solution (no matter how ties are broken).
+
+If all items have the same value, then this algorithm always outputs an optimal solution (no matter how ties are broken).
+
+
+Question 9:-
+Which of the following statements are true about the generic local search algorithm? [Check all that apply.]
+
+
+The generic local search algorithm is guaranteed to eventually converge to an optimal solution.
+
+The output of the generic local search algorithm generally depends on the choice of the starting point.
+
+The generic local search algorithm is guaranteed to terminate in a polynomial number of iterations.
+
+The output of the generic local search algorithm generally depends on the choice of the superior neighboring solution to move to next (in an iteration where there are multiple such solutions).
+
+
+Question 10:-
+Which of the following statements are true about the tractability of the Knapsack problem? [Check all that apply.]
+
+
+Assume that P≠NP. The special case of the Knapsack problem in which all item values, item sizes, and the knapsack capacity are positive integers, can be solved in polynomial time.
+
+Assume that P≠NP. The special case of the Knapsack problem in which all item sizes are positive integers less than or equal to n5, where n is the number of items, can be solved in polynomial time.
+
+Assume that P≠NP. The special case of the Knapsack problem in which all item values are positive integers less than or equal to n5, where n is the number of items, can be solved in polynomial time.
+
+If there is a polynomial-time algorithm for the Knapsack problem in general, then P=NP.

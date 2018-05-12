@@ -1,0 +1,60 @@
+Question 1:-
+This question will give you further practice with the Master Method. Suppose the running time of an algorithm is governed by the recurrence T(n)=7∗T(n/3)+n2. What's the overall asymptotic running time (i.e., the value of T(n))?
+
+a) θ(n2logn)
+b) θ(n2)
+c) θ(n2.81)
+d) θ(nlogn)
+
+
+Question 2:-
+This question will give you further practice with the Master Method. Suppose the running time of an algorithm is governed by the recurrence T(n)=9∗T(n/3)+n2. What's the overall asymptotic running time (i.e., the value of T(n))?
+
+a) θ(n2logn)
+b) θ(n3.17)
+c) θ(n2)
+d) θ(nlogn)
+
+
+Question 3:-
+This question will give you further practice with the Master Method. Suppose the running time of an algorithm is governed by the recurrence T(n)=5∗T(n/3)+4n. What's the overall asymptotic running time (i.e., the value of T(n))?
+
+a) θ(nlog3(5))
+b) θ(nlog(n))
+c) θ(n2)
+d) θ(n2.59)
+e) θ(nlog3log5)
+f) θ(n5/3)
+
+
+Question 4:-
+Consider the following pseudocode for calculating ab (where a and b are positive integers)
+
+FastPower(a,b) :
+  if b = 1
+    return a
+  else
+    c := a*a
+    ans := FastPower(c,[b/2])
+  if b is odd
+    return a*ans
+  else return ans
+end
+
+Here [x] denotes the floor function, that is, the largest integer less than or equal to x.
+
+Now assuming that you use a calculator that supports multiplication and division (i.e., you can do multiplications and divisions in constant time), what would be the overall asymptotic running time of the above algorithm (as a function of b)?
+
+a) Θ(b√)
+b) Θ(blog(b))
+c) Θ(log(b))
+d) Θ(b)
+
+
+Question 5:-
+Choose the smallest correct upper bound on the solution to the following recurrence: T(1)=1 and T(n)≤T([n√])+1 for n>1. Here [x] denotes the "floor" function, which rounds down to the nearest integer. (Note that the Master Method does not apply.)
+
+a) O(logn)
+b) O(n√)
+c) O(1)
+d) O(loglogn)

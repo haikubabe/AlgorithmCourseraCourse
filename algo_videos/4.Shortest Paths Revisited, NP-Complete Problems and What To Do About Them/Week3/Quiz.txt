@@ -1,0 +1,86 @@
+Question 1:-
+Recall the Vertex Cover problem from the video lectures: given an undirected graph (with no parallel edges), compute a minimize-size subset of vertices that includes at least one endpoint of every edge. Consider the following greedy algorithm, given a graph G: (1) initialize S=∅; (2) while S is not a vertex cover of G: (2a) let F denote the edges with neither endpoint in S; (2b) let e be some edge of F; (2c) add both endpoints of e to S; (3) return S.
+
+Consider the following statement: for every graph G with n vertices, this greedy algorithm returns a vertex cover with size at most f(n) times that of an optimal (minimum-size) vertex cover. Which of the following is the smallest choice of the function f(n) for which this statement is true?
+
+[Hint: suppose the greedy algorithm picks an edge e with endpoints u and v. What can you say about every feasible solution to the problem?]
+
+
+2
+
+O(logn)
+
+O(n√)
+
+O(n)
+
+
+Question 2:-
+In the set cover problem, you are given m sets S1,...,Sm, each a subset of a common set U with size |U|=n. The goal is to select as few of these sets as possible, subject to the constraint that the union of the chosen sets is all of U. (You can assume that ∪mi=1Si=U.) For example, if the given sets are {1,2}, {2,3}, and {3,4}, then the optimal solution consists of the sets {1,2} and {3,4}.
+
+Here is a natural iterative greedy algorithm. First, initialize C=∅, where C denotes the sets chosen so far. The main loop is: as long as the union ∪S∈CS of the sets chosen so far is not the entire set U:
+
+Let Si be a set that includes the maximum-possible number of elements not in previously-chosen sets (i.e., that maximizes |Si−∪S∈CS|).
+Add Si to C.
+Consider the following statement: for every instance of the set cover problem (with |U|=n), this greedy algorithm returns a set cover with size at most f(n) times that of an optimal (minimum-size) set cover. Which of the following is the smallest choice of the function f(n) for which this statement is true?
+
+[Hint: what's the mininum-possible progress that the greedy algorithm can make in each iteration, as a function of the size of an optimal set cover and of the number of elements that have not yet been covered?]
+
+
+2
+
+O(logn)
+
+O(n√)
+
+O(n)
+
+
+Question 3:-
+Suppose you are given m sets S1,...,Sm, each a subset of a common set U. The goal is to choose 2 of the m sets, Si and Sj, to maximize the size |Si∪Sj| of their union. One natural heuristic is to use a greedy algorithm: (i) choose the first set Si to be as large as possible, breaking ties arbitrarily; (ii) choose the second set Sj to maximize |Si∪Sj| (i.e., as the set that includes as many elements as possible that are not already in Si), again breaking ties arbitrarily. For example, if the given sets are {1,2}, {2,3}, and {3,4}, then the algorithm might pick the set {1,2} in the first step; if it does so, it definitely picks the set {3,4} in the second step (for an objective function value of 4).
+
+Consider the following statement: for every instance of the above problem, the greedy algorithm above chooses two sets Si,Sj such that |Si∪Sj| is at least c times the maximum size of the union of two of the given sets. Which of the following is the largest choice of the constant c for which this statement is true?
+
+
+2/3
+
+3/4
+
+1
+
+1/2
+
+
+Question 4:-
+Consider the following job scheduling problem. There are m machines, all identical. There are n jobs, and job j has size pj. Each job must be assigned to exactly one machine. The load of a machine is the sum of the sizes of the jobs that get assigned to it. The makespan of an assignment of jobs is the maximum load of a machine; this is the quantity that we want to minimize. For example, suppose there are two machines and 4 jobs with sizes 7,8,5,6. Assigning the first two jobs to the first machine and the last two jobs to the second machine yields machine loads 15 and 11, for a makespan of 15. A better assignment puts the first and last jobs on the first machine and the second and third jobs on the second machine, for a makespan of 13.
+
+Consider the following greedy algorithm. Iterate through the jobs j=1,2,3,…,n one-by-one. When considering job j, assign it to the machine that currently has the smallest load (breaking ties arbitrarily). For example, in the four-job instance above, this algorithm would assign the first job to the first machine, the second job to the second machine, the third job to the first machine, and the fourth job to the second machine (for a suboptimal makespan of 14).
+
+Consider the following statement: for every such job scheduling instance, this greedy algorithm computes a job assignment with makespan at most c times that of an optimal (minimum-makespan) job assignment. Which of the following is the smallest choice of the constant c that makes this statement true?
+
+[Hint: let A and B denote the average and maximum job sizes (A=(∑jpj)/m and B=maxjpj). Try to relate both the optimal solution and the output of the greedy algorithm to A,B.]
+
+
+2
+
+6/5
+
+3/2
+
+4
+
+
+Question 5:-
+Consider the same makespan-minimization job scheduling problem studied in the previous problem. Now suppose that, prior to running the greedy algorithm in the previous problem, we first sort the jobs from biggest to smallest. For example, in the four-job instance discussed in the previous problem, the jobs would be considered in the order 8,7,6,5, and the greedy algorithm would then produce an optimal schedule, with makespan 13.
+
+Consider the following statement: for every such job scheduling instance, the greedy algorithm (with this sorting preprocessing step) computes a job assignment with makespan at most c times that of an optimal (minimum-makespan) job assignment. Which of the following is the smallest choice of the constant c for which this statement is true?
+
+
+3/2
+
+2
+
+6/5
+
+4
+
